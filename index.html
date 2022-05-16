@@ -1241,5 +1241,60 @@
             }
         }
     </script>
+
+    <!-- Phần xử lí active filter -->
+    <script>
+        var optionFilters = document.getElementsByClassName('content__filter-btn')
+        
+        for (var i = 0; i < optionFilters.length; i++){
+            optionFilters[i].onclick = function (event) {
+                event.target.classList.add('btn--primary')
+                for (var j = 0 ; j < optionFilters.length ; j++) {
+                    if(!(event.target == optionFilters[j])){
+                        optionFilters[j].classList.remove('btn--primary')
+                    }
+                }
+            }
+        }
+        
+
+    </script>
+
+    <!-- Phần xử lí trái tym -->
+    <script>
+        var elementsHearts = document.getElementsByClassName('home-product__item-active-like')
+
+        for (var i = 0; i<elementsHearts.length ; i++){
+            elementsHearts[i].onclick = function (event) {
+                event.target.parentElement.classList.toggle('active')
+                event.preventDefault()
+            }
+        }
+    </script>
+
+    <!-- Phần xử lí selection tìm kiếm trong phần header -->
+
+    <script>
+
+        var elementContainerOptionSearch = document.querySelector('.header__search-selection')
+        
+        var searchOptionItems = document.getElementsByClassName('header__search-option-item')
+        for (var item of searchOptionItems) {
+            item.onclick = function (event) {
+                elementContainerOptionSearch.childNodes[0].data = `${event.target.innerText}`
+
+                event.target.classList.add('header__search-option-item--checked')
+
+                for (var item of searchOptionItems) {
+                    if (item != event.target) {
+                        item.classList.remove('header__search-option-item--checked')
+                    }
+                }
+            }
+        }
+
+
+        
+    </script>
 </body>
 </html>
