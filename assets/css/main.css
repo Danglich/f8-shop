@@ -52,6 +52,7 @@ p{
 }
 
 .header-sort-bar__link{
+    cursor: pointer;
     position: relative;
     width: 100%;
     height: 100%;
@@ -1510,7 +1511,16 @@ p{
     font-size: 1.4rem;
 }
 
-.home-product__item-active-like-icon-love{
+.active i.home-product__item-active-like-icon-love {
+    display: block;
+
+}
+
+.active i.home-product__item-active-like-icon-default{
+    display: none;
+}
+
+i.home-product__item-active-like-icon-love{
     color: var(--primary-color);
     display: none;
 }
