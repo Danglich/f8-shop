@@ -1511,6 +1511,11 @@ p{
     font-size: 1.4rem;
 }
 
+i.home-product__item-active-like-icon-love{
+    color: var(--primary-color);
+    display: none;
+}
+
 .active i.home-product__item-active-like-icon-love {
     display: block;
 
@@ -1520,10 +1525,7 @@ p{
     display: none;
 }
 
-i.home-product__item-active-like-icon-love{
-    color: var(--primary-color);
-    display: none;
-}
+
 
 
 
