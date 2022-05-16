@@ -1223,5 +1223,23 @@
         modalSigInOverlay.addEventListener("click", offForm)
     
     </script>
+
+    <!-- Phần xử lí active sort Bar trên mobile -->
+    <script>
+        var sortBarMobileElements = document.getElementsByClassName('header-sort-bar__link') 
+        
+        for (var element of sortBarMobileElements) {
+            
+            element.onclick = function (event) {
+                event.target.classList.add('header-sort-bar--active')
+
+                for (var element of sortBarMobileElements) {
+                    if (element != event.target) {
+                        element.classList.remove('header-sort-bar--active')
+                    }
+                }
+            }
+        }
+    </script>
 </body>
 </html>
